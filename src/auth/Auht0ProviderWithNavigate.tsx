@@ -17,8 +17,8 @@ type Props = {
  if(!domain || !clientId || !redirectURL || !audience){
     throw new Error("Unable to initialize auth");
  }
-const onRedirectCallback = (appState?: AppState, user?:User) => {
-   navigate('/auth-callback')
+const onRedirectCallback = (appState?: AppState) => {
+   navigate(appState?.returnTo || '/auth-callback')
 }
  return (
     <Auth0Provider domain = {domain}
