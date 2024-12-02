@@ -6,7 +6,7 @@ import ManageRestaurantForm from "@/forms/manage-restaurant-form/ManageRestauran
 
 const ManageRestaurantPage = () => {
 
-  const{restaurant,isLoading : getLoading} = useGetMyRestaurant()
+  const{restaurant} = useGetMyRestaurant()
   const {createRestaurant,isLoading : isCreateLoading} = useCreateMyRestaurant()
   const {updateRestaurant, isLoading: isUpdateLoading} = useUpdateMyRestaurant()
 

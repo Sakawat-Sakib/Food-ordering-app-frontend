@@ -97,7 +97,7 @@ const SearchPage = () => {
             </div>
             
 
-            {results?.data.map((item,index)=>(
+            {results?.data.map((item)=>(
                 <SearchResultCard restaurant={item}/>
             ))}
 
