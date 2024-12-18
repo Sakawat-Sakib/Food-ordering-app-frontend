@@ -12,6 +12,11 @@ const HomePage = () => {
                         pathname: `/search/${searchFromValues.searchQuery}`
                 })
         }
+        const handleSearchClickSubmit = (searchValue: String) => {
+                navigate({
+                        pathname: `/search/${searchValue}`
+                })
+        }
   return (
     <div className="flex flex-col gap-12">
             <div className="md:px-32 bg-white rounded-lg shadow-md py-8 flex flex-col gap-5 text-center -mt-16">
@@ -19,9 +24,9 @@ const HomePage = () => {
                     <span className="text-xl">Food is just a click away</span>
                     <SearchBar placeHolder="Search City i.e Dhaka, Chattogram" onSubmit={handleSearchSubmit} searchQuery={location}/>
                     <div className="flex mx-auto gap-5">
-                        <span onClick={()=> setLocation("Dhaka")} className="px-3 py-1 bg-gray-100 rounded-full cursor-pointer hover:bg-gray-200">Dhaka</span>
-                        <span onClick={()=> setLocation("Chattogram")} className="px-3 py-1 bg-gray-100 rounded-full cursor-pointer hover:bg-gray-200">Chattogram</span>
-                        <span onClick={()=> setLocation("Manchester")} className="px-3 py-1 bg-gray-100 rounded-full cursor-pointer hover:bg-gray-200">Manchester</span>
+                        <span onClick={()=> handleSearchClickSubmit("Dhaka")} className="px-3 py-1 bg-gray-100 rounded-full cursor-pointer hover:bg-gray-200">Dhaka</span>
+                        <span onClick={()=> handleSearchClickSubmit("Chattogram")} className="px-3 py-1 bg-gray-100 rounded-full cursor-pointer hover:bg-gray-200">Chattogram</span>
+                        <span onClick={()=> handleSearchClickSubmit("Manchester")} className="px-3 py-1 bg-gray-100 rounded-full cursor-pointer hover:bg-gray-200">Manchester</span>
                     </div>
             </div>
 
