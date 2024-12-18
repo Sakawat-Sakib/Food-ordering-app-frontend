@@ -5,7 +5,7 @@ import {useNavigate } from "react-router-dom"
 import { useState } from "react"
 
 const HomePage = () => {
-        const [location, setLocation] = useState("")
+        const [location] = useState("")
         const navigate = useNavigate()
         const handleSearchSubmit = (searchFromValues: SearchForm) => {
                 navigate({
